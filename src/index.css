@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white;
+  }
+}
+
+/* Custom styles for react-calendar */
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
+}
+
+.react-calendar__tile {
+  padding: 1em 0.5em;
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.react-calendar__tile--now {
+  @apply bg-primary-50 dark:bg-primary-900;
+}
+
+.react-calendar__tile--active {
+  @apply bg-primary-600 dark:bg-primary-500 text-white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  @apply bg-primary-700 dark:bg-primary-600;
+}
+
+.react-calendar__navigation button {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.react-calendar__navigation button:disabled {
+  @apply text-gray-400 dark:text-gray-600;
+}
+
+.react-calendar__month-view__weekdays {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
+.react-calendar__tile:disabled {
+  @apply text-gray-400 dark:text-gray-600;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+
+/* Leaflet map customizations */
+.leaflet-container {
+  @apply rounded-lg;
+}
+
+.leaflet-control-zoom {
+  @apply hidden;
+}
+
+.leaflet-control-attribution {
+  @apply hidden;
+}
